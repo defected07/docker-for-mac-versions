@@ -1,4 +1,4 @@
-# Docker for Mac download links
+# "Docker for Mac" Download Links
 
 Inspired by [docker/for-mac#1120](https://github.com/docker/for-mac/issues/1120).
 
@@ -14,13 +14,13 @@ virtualenv -p python3 venv
 And execute the scraper:
 
 ```
-> ./venv/bin/python3 script.py --help
-usage: scrape.py [-h] [--limit LIMIT] [--out OUT] {stable,edge}
+> ./venv/bin/python3 scrape.py --help
+usage: scrape.py [-h] [--limit LIMIT] [--out OUT] {amd64,arm64}
 
-Scrape for Docker for Mac release download links
+Scrape for Docker for Mac architecture release download links
 
 positional arguments:
-  {stable,edge}
+  {amd64,arm64}
 
 optional arguments:
   -h, --help     show this help message and exit
@@ -30,8 +30,8 @@ optional arguments:
 
 ## Example
 
-Scrape for the latest 1000 builds of the stable channel:
+Scrape for the latest 1000 builds of the amd64 architecture:
 
 ```
-> ./venv/bin/python3 script.py stable --out stable.json --limit=1000
+> ./venv/bin/python3 scrape.py amd64 --out amd64.json --limit=1000
 ```
